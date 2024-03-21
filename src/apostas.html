@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leeteria</title>
+    <link rel="stylesheet" href="css/apostas.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+    
+</head>
+
+<body>
+    <div class="container-dezenas">
+        <main class="dezenas">
+            <div>
+                <button onclick="selecionarNum(1)" id="num_1">01</button>
+                <button onclick="selecionarNum(2)" id="num_2">02</button>
+                <button onclick="selecionarNum(3)" id="num_3">03</button>
+                <button onclick="selecionarNum(4)" id="num_4">04</button>
+                <button onclick="selecionarNum(5)" id="num_5">05</button>
+                <button onclick="selecionarNum(6)" id="num_6">06</button>
+                <button onclick="selecionarNum(7)" id="num_7">07</button>
+                <button onclick="selecionarNum(8)" id="num_8">08</button>
+                <button onclick="selecionarNum(9)" id="num_9">09</button>
+                <button onclick="selecionarNum(10)" id="num_10">10</button>
+            </div>
+            <div>
+                <button onclick="selecionarNum(11)" id="num_11">11</button>
+                <button onclick="selecionarNum(12)" id="num_12">12</button>
+                <button onclick="selecionarNum(13)" id="num_13">13</button>
+                <button onclick="selecionarNum(14)" id="num_14">14</button>
+                <button onclick="selecionarNum(15)" id="num_15">15</button>
+                <button onclick="selecionarNum(16)" id="num_16">16</button>
+                <button onclick="selecionarNum(17)" id="num_17">17</button>
+                <button onclick="selecionarNum(18)" id="num_18">18</button>
+                <button onclick="selecionarNum(19)" id="num_19">19</button>
+                <button onclick="selecionarNum(20)" id="num_20">20</button>
+            </div>
+            <div>
+                <button onclick="selecionarNum(21)" id="num_21">21</button>
+                <button onclick="selecionarNum(22)" id="num_22">22</button>
+                <button onclick="selecionarNum(23)" id="num_23">23</button>
+                <button onclick="selecionarNum(24)" id="num_24">24</button>
+                <button onclick="selecionarNum(25)" id="num_25">25</button>
+                <button onclick="selecionarNum(26)" id="num_26">26</button>
+                <button onclick="selecionarNum(27)" id="num_27">27</button>
+                <button onclick="selecionarNum(28)" id="num_28">28</button>
+                <button onclick="selecionarNum(29)" id="num_29">29</button>
+                <button onclick="selecionarNum(30)" id="num_30">30</button>
+            </div>
+            <div>
+                <button onclick="selecionarNum(31)" id="num_31">31</button>
+                <button onclick="selecionarNum(32)" id="num_32">32</button>
+                <button onclick="selecionarNum(33)" id="num_33">33</button>
+                <button onclick="selecionarNum(34)" id="num_34">34</button>
+                <button onclick="selecionarNum(35)" id="num_35">35</button>
+                <button onclick="selecionarNum(36)" id="num_36">36</button>
+                <button onclick="selecionarNum(37)" id="num_37">37</button>
+                <button onclick="selecionarNum(38)" id="num_38">38</button>
+                <button onclick="selecionarNum(39)" id="num_39">39</button>
+                <button onclick="selecionarNum(40)" id="num_40">40</button>
+            </div>
+            <div>
+                <button onclick="selecionarNum(41)" id="num_41">41</button>
+                <button onclick="selecionarNum(42)" id="num_42">42</button>
+                <button onclick="selecionarNum(43)" id="num_43">43</button>
+                <button onclick="selecionarNum(44)" id="num_44">44</button>
+                <button onclick="selecionarNum(45)" id="num_45">45</button>
+                <button onclick="selecionarNum(46)" id="num_46">46</button>
+                <button onclick="selecionarNum(47)" id="num_47">47</button>
+                <button onclick="selecionarNum(48)" id="num_48">48</button>
+                <button onclick="selecionarNum(49)" id="num_49">49</button>
+                <button onclick="selecionarNum(50)" id="num_50">50</button>
+            </div>
+        </main>
+    </div>
+    <div class="container-confirma">
+
+        <button class="limpar-button" onclick="limpar()">Limpar Aposta</button>
+        <button class="Surpresinha" onclick="surpresinha()">Surpresinha</button>
+
+        <form>
+            <label for="nome" class="nomeLabel">Nome do Apostador</label>
+            <input type="text" id="nomeText" placeholder="Nome">
+            <label for="CPF" class="cpfLabel">CPF do Apostador</label>
+            <input type="text" id="cpfText" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="xxx.xxx.xxx-xx">
+        </form>
+
+        <p style="color: red; font-weight: bold;">Não se esqueça de salvar sua aposta antes de Finalizar as Apostas!</p>
+        <button class="salvar-button" id="salvarApostaButton">Salvar Aposta</button>
+        <button class="listar-button" id="listarApostasButton">Todas as apostas</button>
+        <table id="apostasTable" class="styled-table">
+            <thead id="headerResult" style="display: none;">
+                <tr>
+                    <th>Nº da aposta</th>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Números apostados</th>
+                </tr>
+            </thead>
+            <tbody id="apostasTableBody">
+                
+            </tbody>
+        </table>
+            <a href="resultado.html">
+                <button class="aposta-button" id="finalizarApostaButton">Finalizar Apostas</button>
+            </a>
+    </div>
+    </div>
+    <script src="js/apostas.js" type="text/javascript"></script>
+</body>
+</html>

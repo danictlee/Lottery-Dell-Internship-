@@ -1,0 +1,122 @@
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+main button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(32, 159, 218);
+    background-color: black;
+    border: rgb(153, 29, 169) 0.5px solid;
+    cursor: pointer;
+}
+.container-dezenas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:  1px solid;
+    font-weight: bold;
+    text-align: center;
+    color: #c1129e;
+    width: 500px;
+    background-color: rgb(7, 7, 18);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container-confirma {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--secondary-color);
+
+}
+
+.container-confirma button {
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(32, 159, 218);
+    background-color: black;
+    border: #c1129e 0.5px solid;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nomeLabel, .cpfLabel{
+    margin: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #c1129e;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+form input {
+    margin: 5px;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+form label {
+    margin: 5px;
+    font-size: 15px;
+}
+
+.styled-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+.styled-table th, .styled-table td {
+    padding: 10px;
+    border: 1px solid #c1129e;
+}
+
+.styled-table th {
+    background-color: #000000;
+    color: rgb(14, 130, 193);
+}
+
+.styled-table tr:nth-child(even) {
+    background-color: #000000;
+}
+
+.styled-table td {
+    padding: 10px;
+    border: 1px solid #c1129e;
+    color: rgb(32, 159, 218); /* Change this to the color you want */
+}
+
+ body{
+        background: #0f1829;
+}
+
